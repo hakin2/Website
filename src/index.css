@@ -19,6 +19,12 @@
   display: block;
 }
 
+.highlight {
+  background-color: rgb(37, 59, 251); /* or any color you prefer */
+  font-weight: bold; /* optional: to make the text bold */
+}
+
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(

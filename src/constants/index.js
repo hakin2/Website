@@ -1,28 +1,13 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
+  DataS,
+  SoftDev,
+  DeepL,
   starbucks,
   tesla,
   shopify,
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -32,234 +17,200 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experiences",
   },
+  {
+    id: "Projects",
+    title: "Projects",
+  },  
   {
     id: "contact",
     title: "Contact",
   },
 ];
 
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
-];
 
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Cloud Suppor Intern",
+    company_name: "Amazon",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2024 - Aug 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Gained hands-on experience with all AWS services, such as EC2, S3, RDS, CloudWatch, and etc.",
+      "Managed and enhanced cloud solutions across AWS services, improving system availability and resource efficiency.",
+      "Earned AWS Certified Cloud Practitioner and Solutions Architect certifications, demonstrating deep knowledge in cloud architecture and security.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "System Test Engineer Intern",
+    company_name: "Signify",
     icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    iconBg: "#383E56",
+    date: "Feb 2024 - May 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Worked with the system test engineer team to create and execute test cases and automation frameworks for IoT lighting solutions.",
+      "Implement continuous integration and continuous deployment practices to streamline testing and deployment processes.",
+      "Utilize a variety of testing tools and technologies, including Selenium, Postman, and Jenkins, to automate tests for web interfaces, APIs, and device firmware.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Research Asisstant",
+    company_name: "Georgia State Unversity",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Sept 2023 - May 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and refined graph compression and densification techniques, significantly enhancing the handling of simple graphs and GNNs.",
+      "Co-authored a paper titled 'Exploring Similarity-Based Graph Compression for Efficient Network Analysis and Embedding,' which was accepted into the workshop program at ICCCN 2024.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Teacher Asisstant",
+    company_name: "Georgia State University",
+    icon: shopify,
+    iconBg: "#383E56",
+    date: "Feb 2024 - May 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Conducted sessions that complement the main lectures, and provided personalized assistance during office hours.",
+      "Assess student performance through grading assignments and exams, and offer constructive feedback to help students understand material and improve their skills.",
     ],
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
+
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Big Data Programming",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Covered the technologies, tools, frameworks and languages that are most commonly used in Big Data Programming. Topics include the storage, management, processing and analysis of massive datasets, as well as Big Data governance, security, and privacy issues. ",
     tags: [
       {
-        name: "react",
+        name: "Hadoop",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Spark",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Scala",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Data Structures & Algorithms",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    "Concepts and Techniques of data representation and designing efficient algorithms, including linearly-linked lists, trees, searching, sorting , lower bound arguments, algorithms for sorting, graphs, and string matching.",
     tags: [
       {
-        name: "react",
+        name: "Big O",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Quick Sort",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Hash Table",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Dijkstra",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Kruskal",
+        color: "green-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Machine Learning",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Covered the fundamental concepts and principles of supervised learning, unsupervised learning, semi-supervised learning and reinforcement learning. Gained experience of designing and implementing machine learning methods in real scenario.",
     tags: [
       {
-        name: "nextjs",
+        name: "supervised",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "unsupervised",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "gradient",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+  },  
+  {
+    name: "Software Development",
+    description:
+      "Covered techniques used in large scale scientific or technical software development, including requirements analysis, specification, systems design, implementation, testing, validation, verification, and maintenance.",
+    tags: [
+      {
+        name: "Agile",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: SoftDev,
+  },
+  {
+    name: "Deep Learning",
+    description:
+      "Covered the foundations of deep learning, its training and regularization techniques, and its most prominent architectures such as CNN, RNN, LSTM for image recognition, sequence to sequence processing, and multi-modal applications.",
+    tags: [
+      {
+        name: "GNN",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Neural Network",
+        color: "green-text-gradient",
+      },
+      {
+        name: "CNN",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: DeepL,
+  },
+  {
+    name: "Data Science",
+    description:
+      "Covered fundamental concepts of predictive data science for tabular data with qualitative and quantitative scales. Topics include: data exploration, pre-processing and visualization; analytics base table (ABT) generation; basic supervised learning algorithms (i.e. information-based learning, similarity-based learning, and error-based learning), and comparative evaluation of these algorithms.",
+    tags: [
+      {
+        name: "tabular data",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supervised learning",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: DataS,
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {   experiences,  projects };

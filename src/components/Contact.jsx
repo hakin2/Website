@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-const Contact = () => {
+// Import your image
+import rightBoxImage from "../assets/GoodByeGiphy.webp"; // Replace with actual path
+
+const CustomContact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -18,8 +20,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+    const { name, value } = e.target;
 
     setForm({
       ...form,
@@ -37,9 +38,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Me",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "hamdiselimakin@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -47,7 +48,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert("Your message has been sent successfully.");
 
           setForm({
             name: "",
@@ -59,78 +60,83 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Oops! Something went wrong. Please try again later.");
         }
       );
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className="flex flex-col md:flex-row gap-8">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className="md:w-1/2 bg-blue-300 p-8 rounded-lg shadow-md"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <h2 className={styles.sectionHeadText}>Contact Me</h2>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+        <form ref={formRef} onSubmit={handleSubmit} className="mt-6 space-y-4">
+          <div className="flex flex-col">
+            <label htmlFor="name" className="text-gray-800 font-medium mb-1">
+              Full Name
+            </label>
             <input
-              type='text'
-              name='name'
+              type="text"
+              id="name"
+              name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="Enter your full name"
+              className="bg-white py-3 px-4 rounded-lg outline-none border border-gray-300"
             />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="email" className="text-gray-800 font-medium mb-1">
+              Email Address
+            </label>
             <input
-              type='email'
-              name='email'
+              type="email"
+              id="email"
+              name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="Enter your email address"
+              className="bg-white py-3 px-4 rounded-lg outline-none border border-gray-300"
             />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+          </div>
+          <div className="flex flex-col">
+            <label
+              htmlFor="message"
+              className="text-gray-800 font-medium mb-1"
+            >
+              Your Message
+            </label>
             <textarea
-              rows={7}
-              name='message'
+              id="message"
+              name="message"
+              rows={5}
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="Type your message here"
+              className="bg-white py-3 px-4 rounded-lg outline-none border border-gray-300"
             />
-          </label>
+          </div>
 
           <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            type="submit"
+            className="bg-blue-500 text-white py-3 px-6 rounded-lg font-semibold shadow-md hover:bg-blue-600 transition duration-300"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className="md:w-1/2 bg-blue-300 rounded-lg shadow-md"
       >
-        <EarthCanvas />
+        <img src={rightBoxImage} alt="Right Box Image" className="w-full h-full object-cover rounded-lg" />
       </motion.div>
     </div>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(CustomContact, "contact");
