@@ -20,16 +20,27 @@ const services = [
     icon: creator,
     url: "https://github.com/hakin2",
   },
+    {
+    title: "Download Resume",
+    icon: resumeIcon,
+    url: "/resume.pdf", // Points to file in public folder
+    download: true, // custom flag to indicate download behavior
+  },
 ];
 
 // ServiceCard component
-const ServiceCard = ({ index, title, icon, url }) => (
+const ServiceCard = ({ index, title, icon, url, download }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...(download ? { download: true } : {})}
+      >
         <div
           options={{
             max: 45,
@@ -51,6 +62,7 @@ const ServiceCard = ({ index, title, icon, url }) => (
     </motion.div>
   </Tilt>
 );
+
 
 // Hero component
 const Hero = () => {
