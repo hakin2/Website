@@ -23,7 +23,7 @@ const services = [
     {
     title: "Download Resume",
     icon: resumeIcon,
-    url: "/resume.pdf", // Points to file in public folder
+    url: "../assets/resumes.pdf", // Points to file in public folder
     download: true, // custom flag to indicate download behavior
   },
 ];
